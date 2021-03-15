@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex: 1 1 29%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  &__item-title {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    height: 70px;
+    align-self: flex-start;
+    color: #e5e5e5;
+    h4 {
+      font-family: "CYR";
+      font-weight: 600;
+      font-size: calc(10px + 15 * ((100vw - 320px) / (1920 - 320)));
+      line-height: 28px;
+    }
+    &-plug {
+      flex: 1 1 auto;
+      position: relative;
+      margin-left: 34px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: -20px;
+        width: 100%;
+        height: 89%;
+        border-right: 1px solid var(--color-blue);
+        border-top: 1px solid var(--color-blue);
+      }
+    }
+  }
+  &__item-photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  &__item-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &__item-img-frame {
+    position: absolute;
+    top: 49%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 89%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__item-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    max-width: 450px;
+  }
+
+  &__item-feature {
+    font-size: 21px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
+  }
+}

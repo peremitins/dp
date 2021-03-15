@@ -1,0 +1,24 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+.title {
+  font-family: "ONE";
+  font-weight: 400;
+  font-size: calc(16px + 19 * ((100vw - 320px) / (1920 - 320)));
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+.text {
+  font-family: "GILROY";
+  font-weight: 500;
+  color: var(--color-text);
+}
+

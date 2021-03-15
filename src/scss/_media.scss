@@ -1,0 +1,29 @@
+@media (max-width: 1800px) {
+  .design {
+    padding: 0 100px;
+  }
+  .card {
+    gap: 30px;
+  }
+  .card__item-feature {
+    font-size: 14px;
+  }
+  .instalation {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 993px) {
+  .design {
+    padding: 0 10px;
+  }
+  .card {
+    gap: 30px;
+  }
+  .card__item-feature {
+    font-size: 14px;
+  }
+  .instalation {
+    padding: 0 10px;
+  }
+}

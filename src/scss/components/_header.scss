@@ -1,0 +1,188 @@
+.header {
+  height: 100vh;
+  background: rgba(24, 26, 46, 0.45) url(../../img/header/bg-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  // background: rgba(24, 26, 46, 0.45);
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 125px;
+    margin: 0 135px 0 160px;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-left: 167px;
+    border: 1px solid var(--color-blue);
+    border-radius: 50%;
+    svg {
+      stroke: var(--color-blue);
+      fill: transparent;
+      width: 43px;
+      height: 45px;
+    }
+  }
+  &__menu {
+    margin-left: auto;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 60px;
+  }
+  &__item {
+    font-family: "CYR";
+    // font-size: 24px;
+    font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
+    text-transform: uppercase;
+    height: 100%;
+    color: var(--color-blue);
+    & + & {
+      margin-left: 80px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+  &__link--task {
+    padding: 18px 40px;
+    border: 2px solid var(--color-blue);
+    // font-size: 18px;
+    font-size: calc(10px + 8 * ((100vw - 320px) / (1920 - 320)));
+    &:hover {
+      background: radial-gradient(170.66% 2296.43% at -8.83% -25%, #3093ef 0%, #144da3 100%);
+      color: #e7edf1;
+    }
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    right: 135px;
+    color: #dce4e9;
+  }
+  &__tel-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    // font-size: 15px;
+    font-size: calc(10px + 5 * ((100vw - 320px) / (1920 - 320)));
+  }
+  &__tel-icon {
+    position: absolute;
+    stroke: #dce4e9;
+  }
+  &__tel-icon--tel {
+    position: absolute;
+    left: -10px;
+    width: 23px;
+    height: 23px;
+  }
+  &__tel-icon--rect {
+    width: 50px;
+    height: 50px;
+    fill: transparent;
+  }
+  &__tel-number {
+    font-family: "CYR";
+    font-size: calc(14px + 16 * ((100vw - 320px) / (1920 - 320)));
+    margin-left: 30px;
+    white-space: nowrap;
+  }
+  &__content {
+    margin-top: 31vh;
+    margin-left: 136px;
+    width: 950px;
+  }
+  &__title {
+    font-family: "ONE";
+    // font-size: 60px;
+    font-size: calc(20px + 40 * ((100vw - 320px) / (1920 - 320)));
+    line-height: 75px;
+    text-transform: uppercase;
+    color: #dce4e9;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+  }
+  &__description {
+    font-family: "GILROY";
+    font-weight: 500;
+    // font-size: 28px;
+    font-size: calc(14px + 14 * ((100vw - 320px) / (1920 - 320)));
+    line-height: 45px;
+    letter-spacing: 0.01em;
+    margin-bottom: 65px;
+    color: #ffffff;
+  }
+  
+}
+
+
+
+// btn
+.header__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.header__btn-burger {
+  position: relative;
+  width: 60px;
+  height: 3px;
+  background: #087dea;
+  border-radius: 5px;
+}
+.header__btn-burger::before,
+.header__btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #087dea;
+  border-radius: 5px;
+  transition: transform 0.3s, top 0.3s 0.3s;
+}
+.header__btn-burger::before {
+  left: 0;
+  top: -20px;
+}
+.header__btn-burger::after {
+  left: 0;
+  top: 20px;
+}
+.header__btn.active .header__btn-burger {
+  background: transparent;
+}
+.header__btn.active .header__btn-burger::before,
+.header__btn.active .header__btn-burger::after {
+  top: 0;
+  transition: top 0.3s, transform 0.3s 0.3s;
+}
+.header__btn.active .header__btn-burger::before {
+  transform: rotate(45deg);
+}
+.header__btn.active .header__btn-burger::after {
+  transform: rotate(-45deg);
+}
