@@ -1,29 +1,251 @@
 @media (max-width: 1800px) {
+  .header__top {
+    padding: 0 80px;
+    height: 100px;
+  }
+  .header__content {
+    margin-top: 20vh;
+  }
+  .header__btn {
+    width: 45px;
+  }
+  .header__btn-burger::before {
+    top: -14px;
+  }
+  .header__btn-burger::after {
+    top: 14px;
+  }
+  .header__logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 85px;
+  }
+  .header__logo svg {
+    width: 30px;
+    height: 30px;
+  }
+  .header__item + .header__item {
+    margin-left: 40px;
+  }
+  .header__tel {
+    top: 100px;
+    right: 80px;
+  }
+  .header__title{
+    margin-bottom: 10px;
+  }
+  .header__description {
+    margin-bottom: 35px;
+  }
+  .button__red {
+    width: 275px;
+  }
+  .button__blue {
+    width: 300px;
+  }
   .design {
-    padding: 0 100px;
+    padding: 0 80px;
   }
   .card {
-    gap: 30px;
+    gap: 60px;
   }
   .card__item-feature {
     font-size: 14px;
   }
+  .philosophy, .newformat, .control, .moreit {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .moreit__title, .newformat__title {
+    padding-left: 0;
+  }
+  .philosophy__video::before {
+    width: 60px;
+    height: 60px;
+    border-width: 8px 0 8px 15px;
+  }
+  .philosophy__video::after {
+    border-width: 8px 0 8px 15px;
+  }
   .instalation {
-    padding: 0 100px;
+    padding: 0 80px;
+  }
+  .development {
+    padding: 0 80px;
+  }
+  .footer {
+    padding: 100px 80px;
+  }
+  .footer__link {
+    font-size: 12px;
+  }
+  .description__item {
+    margin-bottom: 35px;
+    font-size: 13px;
+  }
+  .tel {
+    right: 80px;
+    top: 90px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .menu__item {
+    font-size: 14px;
+  }
+  .menu__item + .menu__item {
+    margin-left: 40px;
+  }
+  .menu__link--task {
+    font-size: 11px;
+    padding: 13px 30px;
+  }
+  .philosophy__item {
+    margin-bottom: 20px;
+  }
+  .aside-menu__link {
+    padding: 20px 0;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .aside-menu__link--offer {
+    font-size: 13px;
+  }
+  .description__item {
+    margin-bottom: 27px;
   }
 }
 
 @media (max-width: 993px) {
-  .design {
-    padding: 0 10px;
-  }
-  .card {
-    gap: 30px;
+  
+  .design,
+  .instalation,
+  .development,
+  .newformat,
+  .philosophy,
+  .control,
+  .moreit
+   {
+    padding: 0 42px;
   }
   .card__item-feature {
     font-size: 14px;
   }
-  .instalation {
-    padding: 0 10px;
+  .description__items--right {
+    padding-left: 0;
+  }
+  .menu__link {
+    display: none;
+  }
+  .menu__link--task {
+    display: inline-block;
+  }
+  .header__top {
+    padding: 0 20px;
+  }
+  .header__content {
+    margin-left: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .header__title {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .header__description {
+    font-size: 12px;
+  }
+  .aside-menu {
+    width: 100%;
+  }
+  .aside-menu::before {
+    left: 35%;
+  }
+  .tel {
+    right: 20px;
+  }
+  .description__content {
+    flex-direction: column;
+  }
+  .description__list-img {
+    display: none;
+  }
+  .philosophy,
+  .control,
+  .moreit,
+  .newformat {
+    margin-bottom: 15%;
+  }
+  .philosophy__title,
+  .control__title,
+  .moreit__title {
+    margin-bottom: 2%;
+  }
+  .design__title,
+  .development__title,
+  .instalation__title,
+  .newformat__title {
+    margin-bottom: 5%;
+  }
+  .card__item {
+    margin-bottom: 0;
+  }
+  .footer__column {
+    flex: 1 1 50%;
+    margin-bottom: 50px;
+  }
+  .tel__number {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .design,
+  .instalation,
+  .development,
+  .newformat,
+  .philosophy,
+  .control,
+  .moreit
+   {
+    padding: 0 20px;
+  }
+  .footer {
+    padding: 100px 20px;
+  }
+  .menu__item + .menu__item {
+    margin-left: 0;
+  }
+  .menu {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+  .menu__link--task {
+    padding: 9px 15px;
+  }
+  .tel__number {
+    font-size: 12px;
+  }
+  .tel__icons {
+    display: none;
+  }
+  .header__logo {
+    margin-left: auto;
+  }
+  .tel--header {
+    top: auto;
+    bottom: 5%;
+    right: 5%;
+  }
+  .footer__column {
+    flex: 1 1 100%;
+  }
+  .button__blue {
+    width: 270px;
+  }
+  .card__item-title h4 {
+    font-size: 16px;
   }
 }

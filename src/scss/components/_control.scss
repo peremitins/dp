@@ -1,0 +1,11 @@
+.control {
+  flex-direction: column;
+  padding-left: 137px;
+  padding-right: 53px;
+  margin-bottom: 220px;
+  min-height: auto;
+  &__title {
+    margin-top: 11%;
+    margin-bottom: 10%;
+  }
+}

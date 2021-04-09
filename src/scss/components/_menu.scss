@@ -1,0 +1,40 @@
+.menu {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    font-family: "CYR";
+    font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
+    text-transform: uppercase;
+    color: var(--color-blue);
+    & + & {
+      margin-left: 80px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+  &__link--task {
+    padding: 18px 56px;
+    border: 2px solid var(--color-blue);
+    font-size: calc(10px + 8 * ((100vw - 320px) / (1920 - 320)));
+    transition: color 0.3s ease, background 0.3s ease;
+    &:hover {
+      background: var(--color-blue);
+      color: #e7edf1;
+    }
+  }
+}

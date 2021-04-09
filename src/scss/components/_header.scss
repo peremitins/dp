@@ -1,17 +1,31 @@
 .header {
   height: 100vh;
-  background: rgba(24, 26, 46, 0.45) url(../../img/header/bg-header.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: multiply;
-  // background: rgba(24, 26, 46, 0.45);
+  text-shadow: 1px 1px 2px #000;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background .3s ease-in-out;
+    background: rgba(24, 26, 46, 0.45);
+  }
+  &.active {
+    &::after {
+      background: rgba(8, 20, 35, .8);
+      z-index: 10;
+    }
+  }
   &__top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     height: 125px;
-    margin: 0 135px 0 160px;
+    padding: 0 135px;
   }
   &__logo {
     display: flex;
@@ -19,101 +33,34 @@
     justify-content: center;
     width: 90px;
     height: 90px;
-    margin-left: 167px;
+    position: relative;
+    z-index: 1;
+    margin-left: 227px;
     border: 1px solid var(--color-blue);
     border-radius: 50%;
-    svg {
+    box-shadow: 0px 0px 25px rgba(#087dea, 0.5);
+    &-svg {
       stroke: var(--color-blue);
       fill: transparent;
       width: 43px;
       height: 45px;
+      stroke-width: 2;
+      stroke-dasharray: 397;
+      stroke-dashoffset: 397;
+      filter: drop-shadow(0px 0px 25px rgba(#087dea, 0.5));
+      animation: animLines 13s ease forwards;
     }
   }
-  &__menu {
-    margin-left: auto;
-  }
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 60px;
-  }
-  &__item {
-    font-family: "CYR";
-    // font-size: 24px;
-    font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
-    text-transform: uppercase;
-    height: 100%;
-    color: var(--color-blue);
-    & + & {
-      margin-left: 80px;
-    }
-  }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    &:hover {
-      color: var(--color-red);
-    }
-  }
-  &__link--task {
-    padding: 18px 40px;
-    border: 2px solid var(--color-blue);
-    // font-size: 18px;
-    font-size: calc(10px + 8 * ((100vw - 320px) / (1920 - 320)));
-    &:hover {
-      background: radial-gradient(170.66% 2296.43% at -8.83% -25%, #3093ef 0%, #144da3 100%);
-      color: #e7edf1;
-    }
-  }
-  &__tel {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 150px;
-    right: 135px;
-    color: #dce4e9;
-  }
-  &__tel-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 50px;
-    // font-size: 15px;
-    font-size: calc(10px + 5 * ((100vw - 320px) / (1920 - 320)));
-  }
-  &__tel-icon {
-    position: absolute;
-    stroke: #dce4e9;
-  }
-  &__tel-icon--tel {
-    position: absolute;
-    left: -10px;
-    width: 23px;
-    height: 23px;
-  }
-  &__tel-icon--rect {
-    width: 50px;
-    height: 50px;
-    fill: transparent;
-  }
-  &__tel-number {
-    font-family: "CYR";
-    font-size: calc(14px + 16 * ((100vw - 320px) / (1920 - 320)));
-    margin-left: 30px;
-    white-space: nowrap;
-  }
+
   &__content {
+    position: relative;
+    z-index: 1;
     margin-top: 31vh;
     margin-left: 136px;
-    width: 950px;
+    width: 940px;
   }
   &__title {
     font-family: "ONE";
-    // font-size: 60px;
     font-size: calc(20px + 40 * ((100vw - 320px) / (1920 - 320)));
     line-height: 75px;
     text-transform: uppercase;
@@ -124,17 +71,12 @@
   &__description {
     font-family: "GILROY";
     font-weight: 500;
-    // font-size: 28px;
     font-size: calc(14px + 14 * ((100vw - 320px) / (1920 - 320)));
-    line-height: 45px;
     letter-spacing: 0.01em;
     margin-bottom: 65px;
     color: #ffffff;
   }
-  
 }
-
-
 
 // btn
 .header__btn {
@@ -146,10 +88,11 @@
   height: 80px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 11;
 }
 .header__btn-burger {
   position: relative;
-  width: 60px;
+  width: 100%;
   height: 3px;
   background: #087dea;
   border-radius: 5px;
@@ -158,7 +101,7 @@
 .header__btn-burger::after {
   content: "";
   position: absolute;
-  width: 60px;
+  width: 100%;
   height: 3px;
   background: #087dea;
   border-radius: 5px;
@@ -186,3 +129,17 @@
 .header__btn.active .header__btn-burger::after {
   transform: rotate(-45deg);
 }
+
+//bg
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  transition: 2s all linear;
+}
+

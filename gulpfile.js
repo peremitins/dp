@@ -94,12 +94,22 @@ const images = () => {
 		'./src/img/**.png',
 		'./src/img/**.jpeg',
 		'./src/img/**.svg',
+		'./src/img/**.mp4',
 		'./src/img/**/*.jpg',
 		'./src/img/**/*.png',
 		'./src/img/**/*.jpeg',
-		'./src/img/**/*.svg'
+		'./src/img/**/*.svg',
+		'./src/img/**/*.mp4'
 		])
     .pipe(gulpif(isProd, image()))
+    .pipe(dest('./app/img'))
+};
+
+const imagesSvg = () => {
+  return src([
+		'./src/img/**.svg',
+		'./src/img/**/*.svg',
+		])
     .pipe(dest('./app/img'))
 };
 
@@ -125,8 +135,9 @@ const watchFiles = () => {
   watch('./src/partials/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
-  watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-	watch('./src/img/**/*.{jpg,jpeg,png,svg}', images);
+  watch('./src/img/*.{jpg,jpeg,png,svg,mp4}', images);
+	watch('./src/img/**/*.{jpg,jpeg,png,svg,mp4}', images);
+	watch('./src/img/**/*.{jpg,jpeg,png,svg,mp4}', imagesSvg);
   watch('./src/img/svg/**.svg', svgSprites);
 }
 
@@ -163,10 +174,10 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, imagesSvg, svgSprites, watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, imagesSvg, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
-exports.backend = series(toProd, clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, svgSprites);
+exports.backend = series(toProd, clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, imagesSvg, svgSprites);

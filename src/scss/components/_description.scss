@@ -1,0 +1,117 @@
+.description {
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    backdrop-filter: blur(5px);
+  }
+
+  &__list {
+    position: relative;
+    flex: 1 1 60%;
+  }
+  &__list-img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: auto;
+  }
+
+  &__items {
+    width: 92%;
+    padding-top: 30px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 40px;
+    font-size: calc(10px + 10 * ((100vw - 320px) / (1920 - 320)));
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+    }
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      left: 5px;
+      background: #d8d8d8;
+      z-index: 10;
+    }
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: var(--color-blue);
+      filter: blur(1px);
+    }
+  }
+
+  &__video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 40%;
+    position: relative;
+    clip-path: polygon(9% 0, 90% 0, 100% 15%, 100% 88%, 90% 100%, 9% 100%, 0 86%, 0 14%);
+    background: rgba(#3092d9, 0.15);
+    padding: 1.7%;
+    &:hover::before {
+      width: 120px;
+      height: 120px;
+      box-shadow: 0px 0px 0px 11px rgba(#e34040, 0.4);
+      background: linear-gradient(180deg, #CFD9E4 0%, #6D7181 100%);
+    }
+    &:hover::after {
+      border-color: transparent transparent transparent #081229;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .3s ease;
+    }
+    &::before {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      z-index: 1;
+      background: linear-gradient(180deg, #16304e 11.77%, #060c23 100%);
+      box-shadow: 0px 0px 0px 18px rgba(#e34040, 0.4);
+    }
+    &::after {
+      width: 0;
+      height: 0;
+      z-index: 1;
+      border-style: solid;
+      border-width: 10px 0 10px 17px;
+      border-color: transparent transparent transparent var(--color-text);
+    }
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 10px 10px 10px red;
+      clip-path: polygon(9% 0, 90% 0, 100% 15%, 100% 88%, 90% 100%, 9% 100%, 0 86%, 0 14%);
+      cursor: pointer;
+    }
+    &-frame-stroke {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 92%;
+      height: auto;
+    }
+  }
+}

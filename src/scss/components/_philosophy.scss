@@ -1,56 +1,11 @@
 .philosophy {
+  flex-direction: column;
   padding-left: 137px;
   padding-right: 53px;
   margin-bottom: 220px;
+  min-height: auto;
   &__title {
-    
-    margin-top: 192px;
-    margin-bottom: 121px;
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-  }
-
-  &__list {
-    flex: 1 1 60%;
-  }
-
-  &__items {
-  }
-
-  &__item {
-    position: relative;
-    margin-bottom: 50px;
-    padding-left: 40px;
-    &::before,
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0%, -50%);
-      border-radius: 50%;
-    }
-    &::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      left: 5px;
-      background: #d8d8d8;
-      z-index: 10;
-    }
-    &::after {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background: var(--color-blue);
-      filter: blur(1px);
-    }
-  }
-
-  &__video {
-    flex: 1 1 40%;
+    margin-top: 11%;
+    margin-bottom: 10%;
   }
 }
-

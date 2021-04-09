@@ -1,0 +1,24 @@
+.newformat {
+  flex-direction: column;
+  padding-left: 53px;
+  padding-right: 137px;
+  margin-bottom: 220px;
+  min-height: auto;
+  &__title {
+    margin-top: 11%;
+    margin-bottom: 10%;
+    padding-left: 137px - 53px;
+  }
+}
+
+.description__content--right {
+  flex-direction: row-reverse;
+}
+.description__list-img--right {
+  transform: translate(0, -50%) rotateY(180deg);
+}
+.description__items--right {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 140px;
+}
