@@ -1,3 +1,9 @@
 <svg id="button-form-empty" viewBox="0 0 367 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M365.341 1H1.32573L20.7543 69H345.912L365.341 1Z" stroke="red" stroke-width="2" />
+<path d="M365.341 1H1.32573L20.7543 69H345.912L365.341 1Z" stroke="url(#paint0_radial)" stroke-width="2"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 -8.9999) rotate(15.7512) scale(324.173 1512.81)">
+<stop stop-color="#E34040"/>
+<stop offset="1" stop-color="#B02C2C"/>
+</radialGradient>
+</defs>
 </svg>
