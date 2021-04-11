@@ -108,6 +108,9 @@ input, textarea {
 .main {
   position: relative; }
 
+.aside-menu.active body {
+  overflow: hidden !important; }
+
 .section {
   display: flex;
   flex-wrap: wrap;

@@ -109,8 +109,10 @@ menuBtn.addEventListener('click', function () {
   
   if (menuBtn.classList.contains('active')) {
     header.classList.add('active');
+    document.body.style.overflow = 'hidden';
   } else {
     header.classList.remove('active');
+    document.body.style.overflow = 'auto';
   }
 });
 
@@ -159,5 +161,11 @@ window.addEventListener('scroll', function() {
   }
 })
 
+//body overflow-hidden
 
+if (asideMenu.classList.contains('active')) {
+  console.log('sdfg');
+  
+  document.body.style.overflow = 'hidden';
+}
 //# sourceMappingURL=main.js.map
